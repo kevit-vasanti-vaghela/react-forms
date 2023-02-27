@@ -15,15 +15,17 @@ const SimpleInput = (props) => {
   const nameInputHandler = (e) => {
     setName(e.target.value)
     // console.log(name)
-    console.log('ONCHANGE',e.target.value)
+    // console.log('ONCHANGE',e.target.value)
+    if(e.target.value.trim() !== '') {
+      setNameIsValid(true)
+    }
   }
 
   const nameInputBlurHandler = () => {
     setNameTouched(true)
-    
+
     if(name.trim() === '') {
       setNameIsValid(false)
-      return
     }
   }
 
