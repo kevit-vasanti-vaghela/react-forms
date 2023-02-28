@@ -54,20 +54,20 @@ const BasicForm = (props) => {
       <div className='control-group'>
         <div className={firstnameInputClasses}>
           <label htmlFor='firstname'>First Name</label>
-          <input type='text' id='firstname' onChange={firstnameChangeHandler} onBlur={firstnameBlurHandler} />
+          <input type='text' id='firstname' onChange={firstnameChangeHandler} onBlur={firstnameBlurHandler} value={firstname}/>
           {firstnameInputHasError && <p className="error-text">Firstname must not be empty.</p>}
         </div>
         
         <div className={lastnameInputClasses}>
           <label htmlFor='lastname'>Last Name</label>
-          <input type='text' id='lastname' onChange={lastnameChangeHandler} onBlur={lastnameBlurHandler} />
+          <input type='text' id='lastname' onChange={lastnameChangeHandler} onBlur={lastnameBlurHandler} value={lastname}/>
           {lastnameInputHasError && <p className="error-text">Lastname must not be empty.</p>}
         </div>
         
       </div>
       <div className={emailInputClasses}>
         <label htmlFor='email'>E-Mail Address</label>
-        <input type='text' id='email' onChange={emailChangeHandler} onBlur={emailBlurHandler}/>
+        <input type='text' id='email' onChange={emailChangeHandler} onBlur={emailBlurHandler} value={email}/>
         {emailInputHasError && <p className="error-text">Email must not be emptyand it must contain '@'</p>}
       </div>
       
